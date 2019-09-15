@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  payroll_app:
+    container_name: payroll_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4201:4200'
